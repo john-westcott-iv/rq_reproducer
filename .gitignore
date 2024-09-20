@@ -1,0 +1,15 @@
+__pycache__
+*.py[c,o]
+
+# Mac OS X
+*.DS_Store
+
+# VSCode
+.vscode/
+
+# Ignore PyCharm project files
+.idea/
+
+# Editors
+*.sw[poj]
+*~
