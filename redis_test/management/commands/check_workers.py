@@ -33,5 +33,11 @@ class Command(BaseCommand):
             prepare_for_work=True,
             serializer=None,
         )
-        self.stdout.write(f"Workers for queue: {', '.join(w.all(queue=q))}")
+        workers = w.all(queue=q)
+        if not workers:
+            self.stdout.write(f"Workers for queue: None")
+        else:
+            self.stdout.write("Workers for queue:")
+            for worker in workers:
+                self.stdout.write(f'    {worker.name}')
 
